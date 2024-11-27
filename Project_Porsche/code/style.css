@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    border: border-box;
+}
+
+.navbar {
+    background-color: #464646;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+.nav-menu {
+    color: white;
+    margin-right: 603.2px;
+    display: flex;
+    margin-left:40px; 
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+}
+
+.nav-menu i {
+    margin-right: 10px;
+}
+
+
+.nav-logo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    
+}
+
+.hero-section {
+    background-image: url("../Assets/porsche_image2.jpg");
+    background-color: #ccd5ae;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 590px;
+}
+
+.sub-hero {
+    color: white;
+    margin-right: 1100px;
+    margin-bottom: 50px;
+}
+.sub-hero:hover {
+    color: #9d0208;
+}
+.sub-hero:active {
+    color: navy;
+    
+}
+
+
+.sub-hero h3 {
+    font-size: 50px;
+}
+.sub-hero p {
+    font-size: large;
+}
+
+.nav-model {
+    height: 70px;
+    color: white;
+    background-color: #464646;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    align-content: center;
+}
+
+.nav-model h1 {
+    margin-left: 40px;
+}
+
+.models {
+    height: 500px;
+    background-color: #00132d;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.box {
+    height: 400px;
+    margin-left: 20px;
+    width: 400px;
+    align-items: center;
+}
+
+.box h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+}
+
+.box p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 0;
+    margin-top: 5PX;
+    font-size: small;
+}
+
+
+button {
+    background-color: #9d0208;
+    margin: 250px;
+    color: white;
+    width: 130px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 300px;
+}
+
+button:active {
+    color: black;
+}
+.box1 {
+    background-image: url("../Assets/box1_image.jpg");
+    background-size: cover;
+    color: white;    
+}
+.box1:hover {
+    transform: scale(1.1);
+    z-index: 1;
+    transition: 0.9s;
+}
+
+.box2 {
+    background-image: url("../Assets/box2_image.jpeg");
+    background-size: cover;
+    color: white;   
+}
+.box2:hover {
+    transform: scale(1.1);
+    z-index: 1;
+    transition: 0.9s;
+}
+
+.box3 {
+    background-image: url("../Assets/BOX3.jpg");
+    background-size: cover;
+    color: white;
+}
+.box3:hover {
+    transform: scale(1.1);
+    z-index: 1;
+    transition: 0.9s;
+}
+
+.models-2 {
+    height: 500px;
+    background-color: #00132d;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+   
+}
+
+.box4 {
+    background-image: url("../Assets/box4_image.jpg");
+    background-size: cover;
+    color: white;
+}
+.box4:hover {
+    transform: scale(1.1);
+    z-index: 1;
+    transition: 0.9s;
+}
+.box5 {
+    background-image: url("../Assets/Box5.jpg");
+    background-size: cover;
+    color: white;
+}
+.box5:hover {
+    transform: scale(1.1);
+    z-index: 1;
+    transition: 0.9s;
+}
+
+.foot-panel {
+    height: 150px;
+    color: white;
+    background-color: #191f22;
+}
+h5 {
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 100;
+    margin-left: 60px;
+    padding-top: 20px;
+}
+
+.search-select {
+    color: black;
+    height: 41px;
+    width: 20px;
+    margin-left: 60px;
+    background-color: #f3f3f3;
+    padding-top: 3px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    margin-top: 10px;
+}
+.search-input {
+    width: 300px;
+    font-size: 1.2rem;
+    height: 40px;
+    border-top-right-radius: 4px;
+    margin-top: 20px;
+    border-bottom-right-radius: 4px;
+}
+
+.foot-panel-2 {
+    color: white;
+    background-color: #191f22;
+    height: 100px;
+    margin-top: 1px;
+    text-align: center;
+    padding: 30px;
+    padding-right: 350px;
+    padding-left: 350px;
+}
