@@ -27,7 +27,7 @@
 }
 
 .logo {
-    background-image: url("amazon_logo.jpeg");         
+    background-image: url("../Assests/amazon_logo.jpeg");         
     background-size: cover;
     height: 50px;
     background-color: black;
@@ -171,7 +171,7 @@ height: auto;
 }
 
 .hero-section {
-    background-image: url("BackgroundImage.jpg");
+    background-image: url("../Assests/BackgroundImage.jpg");
     background-size: cover;
     height: 550px;
     display: flex;
@@ -216,7 +216,7 @@ height: auto;
 }
 
 .Box1-img {
-    background-image: url("HealthImage.jpeg");
+    background-image: url("../Assests/HealthImage.jpeg");
     height: 300px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -224,7 +224,7 @@ height: auto;
 }
 
 .Box2-img {
-    background-image: url("Pixel9Image.webp");
+    background-image: url("../Assests/Pixel9Image.webp");
     height: 300px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -232,7 +232,7 @@ height: auto;
 }
 
 .Box3-img {
-    background-image: url("clothes.jpg");
+    background-image: url("../Assests/clothes.jpg");
     height: 300px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -240,7 +240,7 @@ height: auto;
 }
 
 .Box4-img {
-    background-image: url("sports-3.avif");
+    background-image: url("../Assests/sports-3.avif");
     height: 300px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -266,7 +266,7 @@ height: auto;
 }
 
 .Box5-img {
-    background-image: url("toysImage.webp");
+    background-image: url("../Assests/toysImage.webp");
     height: 300px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -274,7 +274,7 @@ height: auto;
 }
 
 .Box6-img {
-    background-image: url("laptop.webp");
+    background-image: url("../Assests/laptop.webp");
     height: 300px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -282,7 +282,7 @@ height: auto;
 }
 
 .Box7-img {
-    background-image: url("PersonalCare.jpg");
+    background-image: url("../Assests/PersonalCare.jpg");
     height: 300px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -290,7 +290,7 @@ height: auto;
 }
 
 .Box8-img {
-    background-image: url("Elecctronics.jpg");
+    background-image: url("../Assests/Elecctronics.jpg");
     height: 300px;
     background-repeat: no-repeat;
     background-size: cover;    
@@ -337,7 +337,7 @@ ul a {
 }
 
 .logo-panel {
-    background-image: url("amazonLogo1.png");
+    background-image: url("../Assests/amazonLogo1.png");
     background-size: cover;
     background-color: #222f3d;
     height: 50px;
