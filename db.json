@@ -1,0 +1,129 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "invoices": [
+    {
+      "idInvoice": 7,
+      "createdOn": "2025-01-17T00:00:00",
+      "createdBy": 2,
+      "createdByUserName": "hari",
+      "companyCompanyId": 35,
+      "companyName": "Shreya Ex-Tech Pvt Ltd",
+      "remarks": "",
+      "amount": 20000.00,
+      "taxAmount": 3600.00,
+      "totalAmount": 23600.00,
+      "status": 0,
+      "paymentReceived": 0.00
+  },
+  {
+      "idInvoice": 8,
+      "createdOn": "2025-01-09T00:00:00",
+      "createdBy": 2,
+      "createdByUserName": "hari",
+      "companyCompanyId": 35,
+      "companyName": "Shreya Ex-Tech Pvt Ltd",
+      "remarks": "",
+      "amount": 1500.00,
+      "taxAmount": 200.00,
+      "totalAmount": 1700.00,
+      "status": 0,
+      "paymentReceived": 0.00
+  },
+  {
+      "idInvoice": 9,
+      "createdOn": "2025-01-27T00:00:00",
+      "createdBy": 2,
+      "createdByUserName": "hari",
+      "companyCompanyId": 35,
+      "companyName": "Shreya Ex-Tech Pvt Ltd",
+      "remarks": "",
+      "amount": 20000.00,
+      "taxAmount": 3600.00,
+      "totalAmount": 23600.00,
+      "status": 0,
+      "paymentReceived": 0.00
+  },
+  {
+      "idInvoice": 10,
+      "createdOn": "2025-01-09T00:00:00",
+      "createdBy": 2,
+      "createdByUserName": "hari",
+      "companyCompanyId": 35,
+      "companyName": "Shreya Ex-Tech Pvt Ltd",
+      "remarks": "",
+      "amount": 1500.00,
+      "taxAmount": 200.00,
+      "totalAmount": 1700.00,
+      "status": 0,
+      "paymentReceived": 0.00
+  }
+  ],
+  "items": [
+    {
+      "type": "items",
+      "itemId": 0,
+      "id": 1,
+      "isGoods": true,
+      "itemName": "Item B",
+      "qty": 0,
+      "unitPrice": 0,
+      "gstTax": "IGST-12[12%]",
+      "discountValue": 0,
+      "invoiceId": 0
+    },
+    {
+      "type": "items",
+      "itemId": 0,
+      "id": 2,
+      "isGoods": true,
+      "itemName": "Item D",
+      "qty": 0,
+      "unitPrice": 0,
+      "gstTax": "GST-10[10%]",
+      "discountValue": 0,
+      "invoiceId": 0
+    }
+  ],
+  "services": [
+    {
+      "type": "services",
+      "serviceId": 0,
+      "id": 1,
+      "isGoods": false,
+      "serviceName": "Service A",
+      "qty": 0,
+      "unitPrice": 0,
+      "gstTax": "IGST-12[12%]",
+      "discountValue": 0,
+      "invoiceId": 0
+    },
+    {
+      "type": "services",
+      "serviceId": 0,
+      "id": 2,
+      "isGoods": false,
+      "serviceName": "Service D",
+      "qty": 0,
+      "unitPrice": 0,
+      "gstTax": "GST-14[14%]",
+      "discountValue": 0,
+      "invoiceId": 0
+    }
+  ]
+}

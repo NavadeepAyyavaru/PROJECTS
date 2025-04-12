@@ -1,0 +1,21 @@
+.mat-toolbar{
+background-color: darkgreen;
+height: 100px;
+}
+
+
+.main-container {
+  display: flex;
+  height: 100vh;
+}
+
+app-side-nav {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.content-container {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+}

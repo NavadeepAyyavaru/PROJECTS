@@ -1,0 +1,47 @@
+.mat-sidenav-container{
+height: 100%;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.toggle-button {
+  font-size: 16px;
+  padding: 8px 24px;
+  border-radius: 4px;
+  text-transform: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-button:hover {
+  background-color: #1976d2;
+}
+
+.toggle-button:active {
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
+} */
+.sidenav-container {
+  height: 100%;
+  display: flex;
+}
+
+.sideNavBtn {
+  width: 250px;
+}
+
+.toggle-button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+mat-sidenav-content {
+  flex: 1;
+  padding: 20px;
+}
+
+
+
+

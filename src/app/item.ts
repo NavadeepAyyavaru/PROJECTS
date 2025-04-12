@@ -1,0 +1,23 @@
+export interface Item {
+        idItem: number,
+        partnumber: string,
+        stock: number,
+        critical: number,
+        idCategory: number,
+        category: string,
+        shelfNumber: string,
+        rackNumber: string,
+        image: null,
+        description: string,
+        blocked: number,
+        netStock: number,
+        lowStockAlertCount: number,
+        idUnits: number,
+        units: string,
+        isAssembled: true,
+        idPackage: number,
+        packageName: string,
+        manufacturer: string,
+        hsncode: string,
+        price: number
+}

@@ -1,0 +1,19 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav class="sideNavBtn" mode="side" opened>
+    <br><br>
+    <div class="button-container">
+      <button mat-raised-button color="primary" class="toggle-button" (click)="openForm()">
+        Invoice Card
+      </button>
+
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+  <!-- <app-form-interface *ngIf="showForm"></app-form-interface> -->
+<div *ngIf="showForm">
+  <router-outlet routerLink="/form"></router-outlet>
+</div>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

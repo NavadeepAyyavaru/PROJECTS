@@ -1,0 +1,116 @@
+<div class="dialog-container">
+  <mat-card-title>{{ isGoods ? 'Add Item' : 'Add Service' }}</mat-card-title>
+
+  <mat-radio-group aria-label="Select an option" [(ngModel)]="isGoods" name="type" (ngModelChange)="onRadioChange()">
+    <mat-radio-button [value]="1" (change)="onSelectionChange(true)">Item Tab</mat-radio-button>
+    <mat-radio-button [value]="0" (change)="onSelectionChange(false)">Service Tab</mat-radio-button>
+  </mat-radio-group>
+
+  <form (ngSubmit)="submitInvoiceItems()" #itemServiceForm="ngForm">
+    <!-- Item Form Fields (Displayed when isGoods is true) -->
+    <div *ngIf="isGoods">
+      <div *ngFor="let item of invoiceItems; let i = index">
+        <mat-form-field appearance="fill" class="input-field">
+          <mat-label>Item</mat-label>
+          <input
+            matInput
+            type="text"
+            placeholder="Search Item Part Number"
+            aria-label="Item"
+            [(ngModel)]="item.itemName"
+            name="itemName_{{ i }}"
+            (ngModelChange)="onItemNameChange($event, i)"
+            [matAutocomplete]="autoItem"
+            required
+          />
+          <mat-autocomplete
+            autoActiveFirstOption
+            #autoItem="matAutocomplete"
+            (optionSelected)="onItemNameChange($event.option.value, i)">
+            <mat-option *ngFor="let option of filteredItems" [value]="option.partnumber">
+              {{ option.partnumber }}
+            </mat-option>
+          </mat-autocomplete>
+          <mat-hint>Required</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Quantity</mat-label>
+          <input matInput type="number" [(ngModel)]="item.qty" name="qty_{{ i }}" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Unit Price</mat-label>
+          <input matInput type="number" [(ngModel)]="item.unitPrice" name="unitPrice_{{ i }}" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>GST Tax</mat-label>
+          <mat-select [(ngModel)]="item.idGstTax" name="gstTax" required>
+            <mat-option *ngFor="let option of filteredGstTaxs" [value]="option.idTaxTable">
+              {{ option.name }}
+            </mat-option>
+          </mat-select>
+          <mat-hint>Required</mat-hint>
+        </mat-form-field>
+        
+
+        <mat-form-field appearance="fill">
+          <mat-label>Discount</mat-label>
+          <input matInput type="number" [(ngModel)]="item.discountValue" name="discountValue_{{ i }}" required />
+        </mat-form-field>
+      </div>
+
+      <mat-dialog-actions>
+        <button mat-button (click)="onCancel($event)">Cancel</button>
+        <button mat-raised-button color="primary" type="submit">Save</button>
+      </mat-dialog-actions>
+    </div>
+
+    <!-- Service Form Fields (Displayed when isGoods is false) -->
+    <div *ngIf="!isGoods">
+      <div *ngFor="let service of invoiceItems; let i = index">
+        <mat-form-field appearance="fill">
+          <mat-label>Service</mat-label>
+          <mat-select [(ngModel)]="service.servicesName" name="servicesName_{{ i }}" (ngModelChange)="onServiceSelect(i)" required>
+            <mat-option *ngFor="let option of serviceNames" [value]="option">
+              {{ option }}
+            </mat-option>
+          </mat-select>
+          <mat-hint>Required</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Quantity</mat-label>
+          <input matInput type="number" [(ngModel)]="service.qty" name="qty_{{ i }}" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Unit Price</mat-label>
+          <input matInput type="number" [(ngModel)]="service.unitPrice" name="unitPrice_{{ i }}" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>GST Tax</mat-label>
+          <mat-select [(ngModel)]="service.idGstTax" name="gstTax" required>
+            <mat-option *ngFor="let option of filteredGstTaxs" [value]="option.idTaxTable">
+              {{ option.name }}
+            </mat-option>
+          </mat-select>
+          <mat-hint>Required</mat-hint>
+        </mat-form-field>
+        
+
+        <mat-form-field appearance="fill">
+          <mat-label>Discount</mat-label>
+          <input matInput type="number" [(ngModel)]="service.discountValue" name="discountValue_{{ i }}" required />
+        </mat-form-field>
+      </div>
+
+      <mat-dialog-actions>
+        <button mat-button (click)="onCancel($event)">Cancel</button>
+        <button mat-raised-button color="primary" type="submit">Save</button>
+      </mat-dialog-actions>
+    </div>
+  </form>
+</div>

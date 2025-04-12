@@ -1,0 +1,95 @@
+<div class="form-container">
+
+  <div class="header-container">
+    <mat-card>
+      <mat-card-title>Invoice</mat-card-title>
+      <mat-card-actions class="actions-container">
+        <div class="button-container">
+
+          <button
+            mat-mini-fab
+            color="primary"
+            (click)="openAddForm()"
+            title="Add New Invoice"
+            aria-label="Add New Invoice"
+          >
+            <mat-icon>add</mat-icon>
+          </button>
+
+          <button
+            mat-mini-fab
+            color="accent"
+            title="Refresh"
+            (click)="fetchTableData()"
+            aria-label="Refresh Table Data"
+          >
+            <mat-icon>autorenew</mat-icon>
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+
+  <div class="body-container">
+    <div class="tableData">
+      <table mat-table [dataSource]="datasource" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="companyName">
+          <th mat-header-cell *matHeaderCellDef> Company </th>
+          <td mat-cell *matCellDef="let element"> {{ element.companyName }} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="createdOn">
+          <mat-header-cell *matHeaderCellDef> Date</mat-header-cell>
+          <td mat-cell *matCellDef="let element">{{ element.createdOn | date: 'yyyy-MM-dd' }}</td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="amount">
+          <th mat-header-cell *matHeaderCellDef> Amount </th>
+          <td mat-cell *matCellDef="let element"> {{ element.amount }} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="totalAmount">
+          <th mat-header-cell *matHeaderCellDef> Total Amount </th>
+          <td mat-cell *matCellDef="let element"> {{ element.totalAmount }} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="edit">
+          <th mat-header-cell *matHeaderCellDef> </th>
+          <td mat-cell *matCellDef="let element">
+            <i
+              class="bi bi-pencil-square"
+              (click)="openEditForm(element)"
+              style="cursor: pointer;"
+              title="Edit Invoice"
+              aria-label="Edit Invoice"
+            ></i>
+          </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="delete">
+          <th mat-header-cell *matHeaderCellDef> </th>
+          <td mat-cell *matCellDef="let element">
+            <i
+              class="bi bi-trash"
+              (click)="deleteTableData(element.id)"
+              style="cursor: pointer;"
+              title="Delete Invoice"
+              aria-label="Delete Invoice"
+            ></i>
+          </td>
+        </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </div>
+</div>
